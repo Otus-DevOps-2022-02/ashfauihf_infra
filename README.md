@@ -1,2 +1,4 @@
-# ashfauihf_infra
-ashfauihf Infra repository
+5 Лекция 
+Первое задание.
+Подключение к внутреннему хосту (someinternalhost) в одну строку
+Используя команду ssh -i ~/.ssh/appuser -J appuser@51.250.65.15 appuser@10.128.0.17
