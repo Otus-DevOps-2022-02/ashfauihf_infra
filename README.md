@@ -20,5 +20,5 @@ ProxyJump bastion
 bastion_IP = 51.250.13.201
 someinternalhost_IP = 10.128.0.17
 6 Лекция
-testapp_IP = 35.198.167.169
+testapp_IP = 51.250.77.91
 testapp_port = 9292
