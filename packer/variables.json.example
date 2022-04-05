@@ -1,8 +1,9 @@
 {
+      "type":      "yandex",
       "ID_catalog": "b1gp431122112",
       "ID_source_image": "ubuntu-1604-lts",
       "SA_PATH": "../ashfauihf_infra/key.json",
       "ssh_username": "ubuntu",
       "zone":      "ru-central1-a",
-	  "subnet_id":"<e9ba242asasdsbgt>"
+      "subnet_id":"<e9ba242asasdsbgt>"
 }
