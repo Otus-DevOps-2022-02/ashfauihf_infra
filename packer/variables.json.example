@@ -5,5 +5,4 @@
       "SA_PATH": "../ashfauihf_infra/key.json",
       "ssh_username": "ubuntu",
       "zone":      "ru-central1-a",
-      "subnet_id":"<e9ba242asasdsbgt>"
 }
