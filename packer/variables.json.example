@@ -1,8 +1,8 @@
 {
-      "type":      "yandex",
-      "ID_catalog": "b1gp431122112",
+      "ID_catalog": "1543264235",
       "ID_source_image": "ubuntu-1604-lts",
-      "SA_PATH": "../ashfauihf_infra/key.json",
+      "SA_PATH": "../key.json",
       "ssh_username": "ubuntu",
-      "zone":      "ru-central1-a",
+      "script_PATH": "script/",
+      "subnet_id": "some_id"
 }
