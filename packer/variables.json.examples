@@ -1,4 +1,6 @@
+{
 "service_account_key_file": "/home/aleksey/keys/key.json",
-"folder_id": "b1gp43annqsmtvmv5lmn",
+"folder_id": "b1gp431122112",
 "source_image_family": "ubuntu-1604-lts",
 "ssh_username": "ubuntu"
+}
