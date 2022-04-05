@@ -1,7 +1,7 @@
 {
     "service_account_key_file": "./fake_key.json",
     "folder_id": "FolderID",
-    "source_image_family": "SoursImageName",
+    "source_image_family": "reddit-base-1649170563",
     "subnet_id": "subnetId",
     "ssh_username": "ubuntu"
 }
