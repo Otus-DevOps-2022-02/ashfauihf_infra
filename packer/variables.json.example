@@ -1,6 +1,6 @@
 {
-    "service_account_key_file": "packer/key.json.example",
-    "folder_id": "b1gp43an22s2223",
-    "source_image_family": "ubuntu-1604-lts",
-     "ssh_username": "ubuntu",
+"service_account_key_file": "packer/key.json.example",
+"folder_id": "b1gp43an22s2223",
+"source_image_family": "ubuntu-1604-lts",
+"ssh_username": "ubuntu",
 }
