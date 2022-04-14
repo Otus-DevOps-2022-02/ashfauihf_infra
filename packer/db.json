@@ -2,7 +2,7 @@
     "builders": [
         {
             "type": "yandex",
-            "service_account_key_file": "../terraform/terrafkey.json",
+            "service_account_key_file": "../terraform/stage/terrafkey.json",
             "folder_id": "b1gp43annqsmtvmv5lmn",
             "source_image_family": "ubuntu-1604-lts",
             "image_name": "reddit-base-{{timestamp}}",
@@ -13,8 +13,9 @@
             "subnet_id":"e9ba822h2a4v6tnvsbgt",
             "use_ipv4_nat": "true"
         }
-    ]
+    ],
 "provisioners": [
+        {
           "type": "shell",
             "script": "scripts/install_mongodb.sh",
             "execute_command": "sudo {{.Path}}"
