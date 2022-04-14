@@ -21,4 +21,6 @@ bastion_IP = 51.250.13.201
 someinternalhost_IP = 10.128.0.17
 6 Лекция
 testapp_IP = 51.250.74.82
-testapp_port = 9292
+testapp_port = 92
+Задание с terraform
+Созданы модули ресурсов app, db. Созданы две среды prod и stage, с использовнием модулей и определением переменных.
