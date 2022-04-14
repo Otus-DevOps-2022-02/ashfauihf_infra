@@ -1,0 +1,30 @@
+{
+    "variables": {
+       "yc_folder_id": "b1gp43annqsmtvmv5lmn",
+       "yc_source_image": "ubuntu-1604-lts",
+       "yc_subnet_id":"e9ba822h2a4v6tnvsbgt",
+},
+{
+    "builders": [
+        {
+            "type": "yandex",
+            "service_account_key_file": "../terraform/terrafkey.json",
+            "folder_id": "b1gp43annqsmtvmv5lmn",
+            "source_image_family": "ubuntu-1604-lts",
+            "image_name": "reddit-base-{{timestamp}}",
+            "image_family": "reddit-base",
+            "ssh_username": "ubuntu",
+            "platform_id": "standard-v1",
+            "zone":"ru-central1-a",
+            "subnet_id":"e9ba822h2a4v6tnvsbgt",
+            "use_ipv4_nat": "true"
+        }
+    ]
+"provisioners": [
+          "type": "shell",
+            "script": "scripts/install_mongodb.sh",
+            "execute_command": "sudo {{.Path}}"
+        ]
+		}
+
+}
