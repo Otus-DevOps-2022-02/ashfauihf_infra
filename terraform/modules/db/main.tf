@@ -4,7 +4,7 @@
      #source  = "yandex-cloud/yandex"
     #}
   #}
-    #required_version = ">= 0.35"
+   # required_version = ">= 0.35"
 #}
 resource "yandex_compute_instance" "db" {
   name = "reddit-db"
