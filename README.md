@@ -1,6 +1,7 @@
 #ashfauihf_infra
 ashfauihf Infra repository
 5 Лекция
+
 Первое задание.
 Подключение к внутреннему хосту (someinternalhost) в одну строку
 Используя команду ssh -i ~/.ssh/appuser -J appuser@51.250.13.201 appuser@10.128.0.17
@@ -21,10 +22,12 @@ bastion_IP = 51.250.13.201
 someinternalhost_IP = 10.128.0.17
 
 6 Лекция
+
 testapp_IP = 51.250.74.82
 testapp_port = 92
 
 Задание с Packer
+
 Команды использованные при выполенение.
 Создаем сервисный аккаунт в яндексе:
 SVC_ACCT="<придумайте имя>"
@@ -45,6 +48,7 @@ packer validate образ.json
 packer build образ.json
 
 Задание с terraform
+
 8 лекция:
 Команды использованные при выполенение.
 terraform init - для загрузки провайдера
@@ -61,6 +65,7 @@ terraform.tfvars - указывается данные для variables.tf
 Два provisioner не могут работать одновременно. Нужно ставить тайм-аут между provisioner(в запускаемом скрипте sleep 1m)
 
 9 лекция
+
 Команды использованные при выполенение.
 terraform get - загрузка модулей
 tree .terraform - просмотр ветки terraform
@@ -69,6 +74,7 @@ tree .terraform - просмотр ветки terraform
 
 Задание(Ansible)
 10 Лекция:
+
 Использованая документация: https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
 Команды использованные при выполенение.
 ansible appserver -i ./inventory -m ping
@@ -78,3 +84,11 @@ appserver - Имя хоста, которое указали в инвентор
 ansible app -m shell -a ''
 Модуль command выполняет команды, не используя оболочку ( sh , bash ), поэтому в нем не работают перенаправления потоков и нет доступа к некоторым переменным окружения.
 ansible db -m service -a name=mongod предназначен для управления сервисами.
+
+
+11 Лекция:
+
+Команды использованные при выполнение.
+ansible-playbook reddit_app.yml --check --limit db
+--check  - позволяет произвести пробный прогон
+--limit -  позвляет ограничивать группу хостов

@@ -1,0 +1,65 @@
+terraform {
+ required_providers {
+   yandex = {
+      source  = "yandex-cloud/yandex"
+    }
+  }
+    required_version = ">= 0.35"
+}
+provider "yandex" {
+ # required_version = ">= 0.35"
+ # token     = "AQAAAAAf1LcMAATuwdh9T_fk7U_7oRISc4znA5U"
+ # cloud_id  = "b1gluqn84cqgcm88c231"
+ # folder_id = "b1gp43annqsmtvmv5lmn"
+ # zone      = "ru-central1-a"
+   service_account_key_file = var.service_account_key_file
+   cloud_id = var.cloud_id
+   folder_id = var.folder_id
+   zone = var.zone
+
+}
+
+resource "yandex_compute_instance" "app" {
+    name  = "reddit-app"
+
+  resources {
+    cores  = 2
+    memory = 2
+  }
+
+  boot_disk {
+    initialize_params {
+     # image_id = "fd8djb9vl8l4nq2dhbah"
+
+}
+  }
+
+
+  network_interface {
+    subnet_id = "e9ba822h2a4v6tnvsbgt"
+    nat       = true
+  }
+  metadata = {
+    ssh-keys = "ubuntu:${file("~/.ssh/ubuntu.pub")}"
+  }
+
+  connection {
+    type  = "ssh"
+    host  = yandex_compute_instance.app.network_interface.0.nat_ip_address
+    user  = "ubuntu"
+    agent = false
+    private_key = file("~/.ssh/ubuntu")
+    #timeout = "45s"
+  }
+  provisioner "file"{
+    source      = "files/puma.service"
+    destination = "/tmp/puma.service"
+#    connection {
+#      timeout = "45s"
+#    }
+   #on_failure = continue
+  }
+  provisioner "remote-exec" {
+    script = "files/deploy.sh"
+   }
+}

@@ -1,10 +1,10 @@
 #terraform {
  #required_providers {
    #yandex = {
-     #source  = "yandex-cloud/yandex"
+    # source  = "yandex-cloud/yandex"
    #}
   #}
-    #required_version = ">= 0.35"
+   # required_version = ">= 0.35"
 #}
 resource "yandex_compute_instance" "app" {
   name = "reddit-app"
