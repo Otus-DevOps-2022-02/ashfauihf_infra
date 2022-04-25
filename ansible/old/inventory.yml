@@ -2,9 +2,9 @@ app:
   hosts:
     appserver:
       ansible_port: 22
-      ansible_host: 51.250.68.227
+      ansible_host: 51.250.66.234
 db:
   hosts:
     dbserver:
       ansible_port: 22
-      ansible_host: 51.250.81.77
+      ansible_host: 51.250.71.75
